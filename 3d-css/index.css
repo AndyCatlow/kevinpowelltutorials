@@ -1,7 +1,7 @@
 :root {
   --boxColor: #0ff7;
   --rotateSpeed: 30s;
-  --bounceSpeed: 1.5s;
+  --bounceSpeed: 2.5s;
 }
 
 body {
@@ -35,12 +35,9 @@ body {
   position: absolute;
   left: -0.5em;
   bottom: 1em;
-  /* background-image: radial-gradient(circle at top, lightblue, #000); */
+  background-image: radial-gradient(circle at top, lightblue, #000);
   animation: ballBounce var(--bounceSpeed) infinite ease-out,
     sceneRotate var(--rotateSpeed) infinite linear reverse;
-  background-image: url("./images/catlow_logo_black.svg"),
-    radial-gradient(circle at top, lightblue, #000);
-  background-size: contain;
 }
 
 @keyframes ballBounce {
@@ -151,53 +148,4 @@ body {
   position: absolute;
   transform: translate(-50%, -50%) rotateX(90deg);
   top: 1em;
-}
-
-/* face text */
-
-.text-wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-}
-#initials {
-  font-size: 2rem;
-  font-weight: lighter;
-}
-
-#initials::before,
-#initials::after {
-  content: "";
-  background: black;
-  height: 2px;
-  width: 40px;
-  position: absolute;
-  top: 50%;
-}
-
-#initials::before {
-  left: 5px;
-}
-#initials::after {
-  right: 5px;
-}
-
-#name {
-  font-size: 2rem;
-  font-weight: 500;
-}
-#job-title {
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: lighter;
-  width: 80%;
-}
-
-.logo-container {
-  background-image: url("./images/catlow_logo_black.svg");
-  background-size: cover;
 }
