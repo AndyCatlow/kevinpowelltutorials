@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --typetime: 6s;
+  --char: 26;
+  --bg-color: white;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-family: monospace;
+}
+
+.title {
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  background: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  animation: typewriter var(--typetime) steps(var(--char)) 2s forwards;
+}
+
+.title::after {
+  content: "";
+  background: black;
+  width: 0.125em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: cursor var(--typetime) steps(var(--char)) 2s forwards,
+    blink 750ms infinite;
+}
+
+.subtitle {
+  transform: translateY(3em);
+  opacity: 0;
+  animation: slideUp 2s ease-in calc(var(--typetime) + 2s) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  to {
+    transform: translateX(26ch);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
