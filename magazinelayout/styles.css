@@ -11,3 +11,34 @@
   --fs-500: 1.5rem;
   --fs-600: 2rem;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+}
+
+h1,
+.lead,
+blockquote {
+  font-family: var(--ff-heading);
+}
