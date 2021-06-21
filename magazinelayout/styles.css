@@ -89,6 +89,11 @@ article > *:not(img) {
   max-width: 100ch;
 }
 
+.article-body > p:first-child::first-letter {
+  font-size: 4em;
+  float: left;
+}
+
 @media (min-width: 50em) {
   article {
     grid-template-columns: min(40%, 40rem);
