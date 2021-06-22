@@ -94,6 +94,10 @@ article > *:not(img) {
   float: left;
 }
 
+.article-body > p:first-child::first-line {
+  font-weight: 523;
+}
+
 @media (min-width: 50em) {
   article {
     grid-template-columns: min(40%, 40rem);
